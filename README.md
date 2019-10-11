@@ -7,7 +7,7 @@ Inasmuch as measurement theory is the study of how numbers are assigned to objec
 Consider an example entry - the noun "accuracy":
 ```
 	"accuracy": {
-		"ranked": ["low", "great", "high"],
+		"ranked": ["low", ["great", "high"]],
 		"values": {
 			"great": {
 				"great.a.01": {
@@ -15,7 +15,7 @@ Consider an example entry - the noun "accuracy":
 					"nnixs": [0],
 					"reason": "synset_part1: great equals adj"
 				},
-				"rank": 0.67
+				"rank": 1.0
 			},
 			"high": {
 				"high.a.01": {
@@ -31,7 +31,7 @@ Consider an example entry - the noun "accuracy":
 					"nnixs": [0],
 					"reason": "synset_part1: low equals adj"
 				},
-				"rank": 0.33
+				"rank": 0.50
 			}
 		},
 		"nodes": [{
@@ -46,14 +46,14 @@ Consider an example entry - the noun "accuracy":
 For each noun, the element "ranked" is an ordered list of adjectives (or a list of adjectives), which provides a basis for comparing one adjective with another. This is an admittedly subjective ordering - consider it to be a start, which allows the calculation of the element "rank" for each adjective.
 
 So in the example above:
-- "low" has a rank of 0.33
-- "great" has a rank of 0.67
+- "low" has a rank of 0.50
+- "great" has a rank of 1.0
 - "high" has a rank of 1.0
 
 Please note:
 - These three adjectives are surely not the only ones that can apply to the noun "accuracy" - more adjectives can be added. (Other nouns have many more adjectives).
-- Other nouns, such as "mistake", contain lists within lists. This is to allow for adjectives that may be considered to have the same ranking.
 
+Another example:
 ```
 "mistake":
 "ranked": [

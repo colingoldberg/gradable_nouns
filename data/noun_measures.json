@@ -1,6 +1,6 @@
 {
 	"accuracy": {
-		"ranked": ["low", "great", "high"],
+		"ranked": ["low", ["great", "high"]],
 		"values": {
 			"great": {
 				"great.a.01": {
@@ -8,7 +8,7 @@
 					"nnixs": [0],
 					"reason": "synset_part1: great equals adj"
 				},
-				"rank": 0.67
+				"rank": 1.0
 			},
 			"high": {
 				"high.a.01": {
@@ -24,7 +24,7 @@
 					"nnixs": [0],
 					"reason": "synset_part1: low equals adj"
 				},
-				"rank": 0.33
+				"rank": 0.50
 			}
 		},
 		"nodes": [{
